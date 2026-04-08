@@ -1,0 +1,34 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold-grad" x1="0" y1="0.5" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="#F5E6C4"/>
+      <stop offset="40%" stop-color="#C9A84C"/>
+      <stop offset="70%" stop-color="#92710A"/>
+      <stop offset="100%" stop-color="#6B5200"/>
+    </linearGradient>
+  </defs>
+  <g id="fliq-logo">
+    <g id="background">
+      <rect x="24" y="24" width="464" height="464" rx="104" fill="#FFFFFF"/>
+      <rect x="24" y="24" width="464" height="464" rx="104" fill="none" stroke="#EBEBF0" stroke-width="2"/>
+    </g>
+    <!-- FLIQ wordmark -->
+    <text
+      x="256" y="300"
+      font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+      font-weight="900"
+      font-style="italic"
+      font-size="164"
+      fill="url(#gold-grad)"
+      text-anchor="middle"
+      letter-spacing="-2"
+    >FLIQ</text>
+    <!-- Witty touch: small chat bubble with a tiny lightning bolt popping out from Q's tail area -->
+    <g id="chat-spark" transform="translate(370, 310)">
+      <!-- Mini chat bubble -->
+      <path d="M0 0 C0 -14 12 -24 28 -24 L52 -24 C68 -24 80 -14 80 0 L80 16 C80 30 68 40 52 40 L32 40 L18 52 L22 40 L28 40 C12 40 0 30 0 16Z" fill="#C9A84C" opacity="0.2"/>
+      <!-- Tiny bolt inside -->
+      <path d="M44 -12 L32 8 L42 8 L34 28 L54 4 L44 4 L50 -12Z" fill="#C9A84C" opacity="0.35"/>
+    </g>
+  </g>
+</svg>

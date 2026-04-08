@@ -1,0 +1,152 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gold gradient background -->
+    <linearGradient id="bg" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#F7D96E"/>
+      <stop offset="45%" stop-color="#E8C84A"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+    <!-- Top shine overlay -->
+    <linearGradient id="bg-shine" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.30"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.05"/>
+    </linearGradient>
+    <!-- Glass fill — more white, less fade -->
+    <linearGradient id="glass" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.98"/>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.90"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.82"/>
+    </linearGradient>
+    <!-- Top highlight shimmer -->
+    <linearGradient id="shimmer" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-15%" y="-10%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#A8882E" flood-opacity="0.45"/>
+    </filter>
+    <!-- Soft inner glow -->
+    <filter id="glow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <g id="fliq-logo">
+    <!-- Background -->
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg)"/>
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg-shine)"/>
+
+    <!--
+      Centered layout with better padding:
+      f=112  l=188  i=264  q=352
+      Total text width ~330, centered in 464 usable area
+      Stroke: 42, baseline 315, x-height 232, ascender 172
+    -->
+
+    <!-- SHADOW LAYER -->
+    <g filter="url(#shadow)" transform="translate(0,3)">
+      <path d="M112,315 L112,197 Q112,170 136,170 L152,170" fill="none"
+            stroke="#B8942A" stroke-opacity="0.22" stroke-width="42"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="92" y1="232" x2="140" y2="232" stroke="#B8942A" stroke-opacity="0.22"
+            stroke-width="42" stroke-linecap="round"/>
+      <line x1="188" y1="172" x2="188" y2="315" stroke="#B8942A" stroke-opacity="0.22"
+            stroke-width="42" stroke-linecap="round"/>
+      <line x1="264" y1="232" x2="264" y2="315" stroke="#B8942A" stroke-opacity="0.22"
+            stroke-width="42" stroke-linecap="round"/>
+      <circle cx="264" cy="188" r="21" fill="#B8942A" fill-opacity="0.22"/>
+      <circle cx="348" cy="274" r="46" fill="none"
+              stroke="#B8942A" stroke-opacity="0.22" stroke-width="42" stroke-linecap="round"/>
+      <path d="M394,292 L394,368 Q394,390 414,390" fill="none"
+            stroke="#B8942A" stroke-opacity="0.22" stroke-width="42"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- MAIN GLASS LAYER -->
+    <g filter="url(#glow)">
+      <!-- f stem + hook -->
+      <path d="M112,315 L112,197 Q112,170 136,170 L152,170" fill="none"
+            stroke="url(#glass)" stroke-width="42"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- f crossbar -->
+      <line x1="92" y1="232" x2="140" y2="232" stroke="url(#glass)"
+            stroke-width="42" stroke-linecap="round"/>
+
+      <!-- l -->
+      <line x1="188" y1="172" x2="188" y2="315" stroke="url(#glass)"
+            stroke-width="42" stroke-linecap="round"/>
+
+      <!-- i body -->
+      <line x1="264" y1="232" x2="264" y2="315" stroke="url(#glass)"
+            stroke-width="42" stroke-linecap="round"/>
+      <!-- i dot -->
+      <circle cx="264" cy="188" r="21" fill="url(#glass)"/>
+
+      <!-- q bowl -->
+      <circle cx="348" cy="274" r="46" fill="none"
+              stroke="url(#glass)" stroke-width="42" stroke-linecap="round"/>
+      <!-- q descender — white, same as bowl -->
+      <path d="M394,292 L394,368 Q394,390 414,390" fill="none"
+            stroke="url(#glass)" stroke-width="42"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- SHIMMER HIGHLIGHT -->
+    <g>
+      <path d="M112,315 L112,197 Q112,170 136,170 L152,170" fill="none"
+            stroke="url(#shimmer)" stroke-width="42"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="92" y1="232" x2="140" y2="232" stroke="url(#shimmer)"
+            stroke-width="42" stroke-linecap="round"/>
+      <line x1="188" y1="172" x2="188" y2="315" stroke="url(#shimmer)"
+            stroke-width="42" stroke-linecap="round"/>
+      <line x1="264" y1="232" x2="264" y2="315" stroke="url(#shimmer)"
+            stroke-width="42" stroke-linecap="round"/>
+      <circle cx="264" cy="188" r="21" fill="url(#shimmer)"/>
+      <circle cx="348" cy="274" r="46" fill="none"
+              stroke="url(#shimmer)" stroke-width="42" stroke-linecap="round"/>
+      <path d="M394,292 L394,368 Q394,390 414,390" fill="none"
+            stroke="url(#shimmer)" stroke-width="42"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- White edge border for glass feel -->
+    <g>
+      <path d="M112,315 L112,197 Q112,170 136,170 L152,170" fill="none"
+            stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="44"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M112,315 L112,197 Q112,170 136,170 L152,170" fill="none"
+            stroke="url(#glass)" stroke-width="40"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="92" y1="232" x2="140" y2="232" stroke="#FFFFFF" stroke-opacity="0.35"
+            stroke-width="44" stroke-linecap="round"/>
+      <line x1="92" y1="232" x2="140" y2="232" stroke="url(#glass)"
+            stroke-width="40" stroke-linecap="round"/>
+
+      <line x1="188" y1="172" x2="188" y2="315" stroke="#FFFFFF" stroke-opacity="0.35"
+            stroke-width="44" stroke-linecap="round"/>
+      <line x1="188" y1="172" x2="188" y2="315" stroke="url(#glass)"
+            stroke-width="40" stroke-linecap="round"/>
+
+      <line x1="264" y1="232" x2="264" y2="315" stroke="#FFFFFF" stroke-opacity="0.35"
+            stroke-width="44" stroke-linecap="round"/>
+      <line x1="264" y1="232" x2="264" y2="315" stroke="url(#glass)"
+            stroke-width="40" stroke-linecap="round"/>
+
+      <circle cx="348" cy="274" r="46" fill="none"
+              stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="44" stroke-linecap="round"/>
+      <circle cx="348" cy="274" r="46" fill="none"
+              stroke="url(#glass)" stroke-width="40" stroke-linecap="round"/>
+      <path d="M394,292 L394,368 Q394,390 414,390" fill="none"
+            stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="44"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M394,292 L394,368 Q394,390 414,390" fill="none"
+            stroke="url(#glass)" stroke-width="40"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

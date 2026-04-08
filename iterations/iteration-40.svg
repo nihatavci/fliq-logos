@@ -1,0 +1,99 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#F7D96E"/>
+      <stop offset="45%" stop-color="#E8C84A"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+    <linearGradient id="bg-shine" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.30"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-10%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#A8882E" flood-opacity="0.35"/>
+    </filter>
+    <filter id="glow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="shimmer" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="25%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g id="fliq-logo">
+    <!-- Background -->
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg)"/>
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg-shine)"/>
+
+    <!--
+      SCALED DOWN to fit with generous padding.
+      Bg safe area: 24+stroke to 488-stroke → ~80 to ~432
+
+      Stroke: 28
+      f=155, l=210, i=264, q bowl center=328
+      Ascender top: 175 (f hook, l top)
+      Baseline: 295
+      x-height line: 222
+      q descender bottom: 348, kick to x=360
+
+      Everything fits inside 100-410 horizontal, 160-365 vertical
+    -->
+
+    <!-- SHADOW -->
+    <g filter="url(#shadow)" transform="translate(0,2)" opacity="0.22">
+      <path d="M155,295 L155,195 Q155,175 172,175 L182,175" fill="none"
+            stroke="#8B7420" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="140" y1="222" x2="174" y2="222" stroke="#8B7420" stroke-width="28" stroke-linecap="round"/>
+      <line x1="210" y1="175" x2="210" y2="295" stroke="#8B7420" stroke-width="28" stroke-linecap="round"/>
+      <line x1="264" y1="222" x2="264" y2="295" stroke="#8B7420" stroke-width="28" stroke-linecap="round"/>
+      <circle cx="264" cy="192" r="14" fill="#8B7420"/>
+      <circle cx="328" cy="259" r="36" fill="none" stroke="#8B7420" stroke-width="28" stroke-linecap="round"/>
+      <path d="M364,275 L364,330 Q364,348 378,348" fill="none"
+            stroke="#8B7420" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- MAIN LETTERS -->
+    <g filter="url(#glow)">
+      <!-- f -->
+      <path d="M155,295 L155,195 Q155,175 172,175 L182,175" fill="none"
+            stroke="#FFFFFF" stroke-opacity="0.93" stroke-width="28"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="140" y1="222" x2="174" y2="222"
+            stroke="#FFFFFF" stroke-opacity="0.93" stroke-width="28" stroke-linecap="round"/>
+
+      <!-- l -->
+      <line x1="210" y1="175" x2="210" y2="295"
+            stroke="#FFFFFF" stroke-opacity="0.93" stroke-width="28" stroke-linecap="round"/>
+
+      <!-- i -->
+      <line x1="264" y1="222" x2="264" y2="295"
+            stroke="#FFFFFF" stroke-opacity="0.93" stroke-width="28" stroke-linecap="round"/>
+      <circle cx="264" cy="192" r="14" fill="#FFFFFF" fill-opacity="0.93"/>
+
+      <!-- q bowl -->
+      <circle cx="328" cy="259" r="36" fill="none"
+              stroke="#FFFFFF" stroke-opacity="0.93" stroke-width="28" stroke-linecap="round"/>
+      <!-- q descender -->
+      <path d="M364,275 L364,330 Q364,348 378,348" fill="none"
+            stroke="#FFFFFF" stroke-opacity="0.93" stroke-width="28"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- SHIMMER -->
+    <g>
+      <path d="M155,295 L155,195 Q155,175 172,175 L182,175" fill="none"
+            stroke="url(#shimmer)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="140" y1="222" x2="174" y2="222" stroke="url(#shimmer)" stroke-width="28" stroke-linecap="round"/>
+      <line x1="210" y1="175" x2="210" y2="295" stroke="url(#shimmer)" stroke-width="28" stroke-linecap="round"/>
+      <line x1="264" y1="222" x2="264" y2="295" stroke="url(#shimmer)" stroke-width="28" stroke-linecap="round"/>
+      <circle cx="264" cy="192" r="14" fill="url(#shimmer)"/>
+      <circle cx="328" cy="259" r="36" fill="none" stroke="url(#shimmer)" stroke-width="28" stroke-linecap="round"/>
+      <path d="M364,275 L364,330 Q364,348 378,348" fill="none"
+            stroke="url(#shimmer)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

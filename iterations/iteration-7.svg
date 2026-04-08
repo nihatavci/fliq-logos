@@ -1,0 +1,63 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <g id="background">
+    <path d="M104,0 L408,0 Q512,0 512,104 L512,408 Q512,512 408,512 L104,512 Q0,512 0,408 L0,104 Q0,0 104,0 Z" fill="#FFFFFF" stroke="#EBEBF0" stroke-width="2"/>
+  </g>
+
+  <!-- Crown + Lightning Icon -->
+  <g id="icon" transform="translate(256, 270)">
+
+    <!-- Shadow layer for depth -->
+    <g id="shadow" opacity="0.15">
+      <path d="M-130,28 L-108,-68 L-54,8 L0,-90 L54,8 L108,-68 L130,28 L118,72 L-118,72 Z" fill="#92710A" transform="translate(3,5)"/>
+    </g>
+
+    <!-- Crown base band - dark gold -->
+    <g id="band">
+      <path d="M-118,28 L118,28 L118,62 Q118,72 108,72 L-108,72 Q-118,72 -118,62 Z" fill="#92710A"/>
+      <!-- Band highlight strip -->
+      <path d="M-108,36 L108,36 L108,46 L-108,46 Z" fill="#C9A84C"/>
+      <!-- Band top edge highlight -->
+      <path d="M-116,28 L116,28 L116,34 L-116,34 Z" fill="#E8C84A" opacity="0.4"/>
+    </g>
+
+    <!-- Crown body - primary gold -->
+    <g id="crown-body">
+      <path d="M-130,28 L-108,-68 L-54,8 L0,-90 L54,8 L108,-68 L130,28 Z" fill="#C9A84C"/>
+    </g>
+
+    <!-- Crown inner highlight for dimensionality -->
+    <g id="crown-highlight">
+      <path d="M-115,20 L-100,-48 L-54,2 L0,-70 L54,2 L100,-48 L115,20 Z" fill="#E8C84A" opacity="0.45"/>
+    </g>
+
+    <!-- Lightning bolt - cut into center prong -->
+    <g id="bolt">
+      <!-- Dark outline for legibility at small sizes -->
+      <path d="M14,-90 L-22,-16 L4,-16 L-14,42 L34,-24 L10,-24 Z" fill="#92710A"/>
+      <!-- Bright bolt -->
+      <path d="M12,-86 L-18,-18 L4,-18 L-10,36 L30,-22 L10,-22 Z" fill="#FFF8E8"/>
+      <!-- Bolt inner glow -->
+      <path d="M10,-78 L-12,-22 L4,-22 L-6,28 L24,-20 L10,-20 Z" fill="#FFFFFF" opacity="0.5"/>
+    </g>
+
+    <!-- Left prong gem -->
+    <g id="gem-left">
+      <path d="M-108,-68 L-100,-56 L-116,-56 Z" fill="#E8C84A"/>
+      <path d="M-108,-76 L-98,-60 L-118,-60 Z" fill="#F5E6C4" opacity="0.5"/>
+    </g>
+
+    <!-- Right prong gem -->
+    <g id="gem-right">
+      <path d="M108,-68 L116,-56 L100,-56 Z" fill="#E8C84A"/>
+      <path d="M108,-76 L118,-60 L98,-60 Z" fill="#F5E6C4" opacity="0.5"/>
+    </g>
+
+    <!-- Band rivets -->
+    <g id="rivets" fill="#E8C84A">
+      <path d="M-70,42 m-6,0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0" />
+      <path d="M0,42 m-6,0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0" />
+      <path d="M70,42 m-6,0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0" />
+    </g>
+  </g>
+</svg>

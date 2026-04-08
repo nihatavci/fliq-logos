@@ -1,0 +1,36 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="main-shadow" x="-15%" y="-10%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#6B5200" flood-opacity="0.28"/>
+    </filter>
+    <linearGradient id="heart-depth" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="#E8C84A"/>
+      <stop offset="50%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#92710A"/>
+    </linearGradient>
+  </defs>
+  <g id="fliq-logo">
+    <g id="background">
+      <rect x="24" y="24" width="464" height="464" rx="104" fill="#FFF8E8"/>
+    </g>
+    <g id="heart" filter="url(#main-shadow)">
+      <path
+        d="M256 396 C204 336 80 260 80 172 C80 104 132 64 196 64 C232 64 256 84 264 112 C272 84 296 64 332 64 C396 64 432 104 432 172 C432 260 308 336 256 396Z"
+        fill="url(#heart-depth)"
+      />
+    </g>
+    <g id="bolt">
+      <path
+        d="M288 100 L224 224 L272 220 L228 372 L328 212 L276 216 L312 100Z"
+        fill="#FFFFFF"
+      />
+      <path
+        d="M288 100 L224 224 L272 220 L228 372 L328 212 L276 216 L312 100Z"
+        fill="none" stroke="#F5E6C4" stroke-width="3" opacity="0.5"
+      />
+    </g>
+    <g id="highlights">
+      <ellipse cx="164" cy="120" rx="40" ry="24" fill="#FFFFFF" opacity="0.25" transform="rotate(-20 164 120)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,63 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="bubble">
+      <path d="M116 100 L396 100 Q420 100 420 124 L420 332 Q420 356 396 356 L220 356 L152 420 L180 356 L116 356 Q92 356 92 332 L92 124 Q92 100 116 100 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="#FFFFFF" stroke="#EBEBF0" stroke-width="2"/>
+  </g>
+
+  <!-- Diamond-Cut Chat Bubble -->
+  <g id="diamond-chat">
+    <!-- Base fill visible through any sub-pixel gaps -->
+    <path id="bubble-base" d="M116 100 L396 100 Q420 100 420 124 L420 332 Q420 356 396 356 L220 356 L152 420 L180 356 L116 356 Q92 356 92 332 L92 124 Q92 100 116 100 Z" fill="#C9A84C"/>
+
+    <!-- 6 bold diamond facets radiating from center -->
+    <g id="facets" clip-path="url(#bubble)">
+      <!-- Center point: 256, 228 -->
+
+      <!-- Facet 1: Top -->
+      <path d="M256 228 L92 60 L420 60 Z" fill="#F5E6C4"/>
+      <!-- Facet 2: Top-right -->
+      <path d="M256 228 L420 60 L460 340 Z" fill="#E8C84A"/>
+      <!-- Facet 3: Bottom-right -->
+      <path d="M256 228 L460 340 L256 460 Z" fill="#92710A"/>
+      <!-- Facet 4: Bottom -->
+      <path d="M256 228 L256 460 L100 460 Z" fill="#C9A84C"/>
+      <!-- Facet 5: Bottom-left -->
+      <path d="M256 228 L100 460 L52 340 Z" fill="#E8C84A"/>
+      <!-- Facet 6: Top-left -->
+      <path d="M256 228 L52 340 L92 60 Z" fill="#92710A"/>
+
+      <!-- Inner diamond table - hexagonal highlight for 3D gem depth -->
+      <path d="M256 185 L291 207 L291 250 L256 272 L221 250 L221 207 Z" fill="#FFF8E8" opacity="0.55"/>
+    </g>
+
+    <!-- Facet division lines -->
+    <g id="facet-lines" clip-path="url(#bubble)" stroke="#92710A" stroke-width="2" opacity="0.2">
+      <line x1="256" y1="228" x2="256" y2="60"/>
+      <line x1="256" y1="228" x2="460" y2="130"/>
+      <line x1="256" y1="228" x2="460" y2="380"/>
+      <line x1="256" y1="228" x2="256" y2="460"/>
+      <line x1="256" y1="228" x2="52" y2="380"/>
+      <line x1="256" y1="228" x2="52" y2="130"/>
+    </g>
+
+    <!-- Inner table outline -->
+    <path d="M256 185 L291 207 L291 250 L256 272 L221 250 L221 207 Z" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.4" clip-path="url(#bubble)"/>
+
+    <!-- Bubble outline -->
+    <path id="bubble-stroke" d="M116 100 L396 100 Q420 100 420 124 L420 332 Q420 356 396 356 L220 356 L152 420 L180 356 L116 356 Q92 356 92 332 L92 124 Q92 100 116 100 Z" fill="none" stroke="#92710A" stroke-width="4" stroke-linejoin="round"/>
+
+    <!-- AI Sparkle - 4-point star at center -->
+    <g id="ai-sparkle">
+      <path d="M256 200 L261.5 219 L280 228 L261.5 237 L256 256 L250.5 237 L232 228 L250.5 219 Z" fill="#FFFFFF"/>
+      <path d="M256 200 L261.5 219 L280 228 L261.5 237 L256 256 L250.5 237 L232 228 L250.5 219 Z" fill="none" stroke="#92710A" stroke-width="2" stroke-linejoin="round"/>
+      <!-- Tiny accent sparkle -->
+      <path d="M302 178 L304.5 185 L312 188 L304.5 191 L302 198 L299.5 191 L292 188 L299.5 185 Z" fill="#FFFFFF" opacity="0.85"/>
+    </g>
+  </g>
+</svg>

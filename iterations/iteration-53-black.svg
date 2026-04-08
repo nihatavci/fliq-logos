@@ -1,0 +1,46 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#1C1C1E"/>
+      <stop offset="100%" stop-color="#0A0A0C"/>
+    </linearGradient>
+    <linearGradient id="glass" gradientUnits="userSpaceOnUse" x1="256" y1="160" x2="256" y2="380">
+      <stop offset="0%" stop-color="#E8E8ED" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#B0B0B8" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#808088" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="shimmer-grad" gradientUnits="userSpaceOnUse" x1="256" y1="160" x2="256" y2="380">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="25%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-10%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.60"/>
+    </filter>
+    <mask id="letters">
+      <path d="M132,305 L132,192 Q132,168 152,168 L162,168" fill="none" stroke="white" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="106" y1="225" x2="158" y2="225" stroke="white" stroke-width="38" stroke-linecap="round"/>
+      <line x1="211" y1="168" x2="211" y2="305" stroke="white" stroke-width="38" stroke-linecap="round"/>
+      <line x1="264" y1="225" x2="264" y2="305" stroke="white" stroke-width="38" stroke-linecap="round"/>
+      <circle cx="264" cy="183" r="19" fill="white"/>
+      <circle cx="356" cy="268" r="40" fill="none" stroke="white" stroke-width="38"/>
+      <line x1="396" y1="268" x2="396" y2="360" stroke="white" stroke-width="38" stroke-linecap="butt"/>
+      <circle cx="396" cy="360" r="19" fill="white"/>
+    </mask>
+  </defs>
+  <g>
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg)"/>
+    <g filter="url(#shadow)" transform="translate(0,3)" opacity="0.35">
+      <path d="M132,305 L132,192 Q132,168 152,168 L162,168" fill="none" stroke="#000000" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="106" y1="225" x2="158" y2="225" stroke="#000000" stroke-width="38" stroke-linecap="round"/>
+      <line x1="211" y1="168" x2="211" y2="305" stroke="#000000" stroke-width="38" stroke-linecap="round"/>
+      <line x1="264" y1="225" x2="264" y2="305" stroke="#000000" stroke-width="38" stroke-linecap="round"/>
+      <circle cx="264" cy="183" r="19" fill="#000000"/>
+      <circle cx="356" cy="268" r="40" fill="none" stroke="#000000" stroke-width="38"/>
+      <line x1="396" y1="268" x2="396" y2="360" stroke="#000000" stroke-width="38" stroke-linecap="butt"/>
+      <circle cx="396" cy="360" r="19" fill="#000000"/>
+    </g>
+    <rect x="0" y="0" width="512" height="512" fill="url(#glass)" mask="url(#letters)"/>
+    <rect x="0" y="0" width="512" height="512" fill="url(#shimmer-grad)" mask="url(#letters)"/>
+  </g>
+</svg>

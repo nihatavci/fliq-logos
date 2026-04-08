@@ -1,0 +1,108 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gold gradient background -->
+    <linearGradient id="bg" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#F7D96E"/>
+      <stop offset="45%" stop-color="#E8C84A"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+    <!-- Top shine overlay -->
+    <linearGradient id="bg-shine" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.30"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.05"/>
+    </linearGradient>
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-15%" y="-10%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#A8882E" flood-opacity="0.40"/>
+    </filter>
+    <!-- Soft glow -->
+    <filter id="glow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Shimmer -->
+    <linearGradient id="shimmer" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="25%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g id="fliq-logo">
+    <!-- Background -->
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg)"/>
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg-shine)"/>
+
+    <!--
+      All letters: solid white (#FFFFFF) with opacity 0.92
+      Consistent look across all letters.
+
+      Layout: centered, generous padding from edges.
+      Safe area: x 80-432 (352 wide), y 100-440
+      Stroke: 38
+      f center=130, l=200, i=268, q bowl center=348
+      Baseline=310, x-height=228, ascender=168
+      q descender stops at y=380 (well inside bg rect which ends at 488)
+      q tail kicks to x=388 max (inside safe area)
+    -->
+
+    <!-- SHADOW -->
+    <g filter="url(#shadow)" transform="translate(0,3)" opacity="0.22">
+      <!-- f -->
+      <path d="M130,310 L130,193 Q130,168 152,168 L165,168" fill="none"
+            stroke="#8B7420" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="112" y1="228" x2="155" y2="228" stroke="#8B7420" stroke-width="38" stroke-linecap="round"/>
+      <!-- l -->
+      <line x1="200" y1="168" x2="200" y2="310" stroke="#8B7420" stroke-width="38" stroke-linecap="round"/>
+      <!-- i -->
+      <line x1="268" y1="228" x2="268" y2="310" stroke="#8B7420" stroke-width="38" stroke-linecap="round"/>
+      <circle cx="268" cy="186" r="19" fill="#8B7420"/>
+      <!-- q bowl (smaller, matching x-height) -->
+      <circle cx="348" cy="270" r="42" fill="none" stroke="#8B7420" stroke-width="38" stroke-linecap="round"/>
+      <!-- q descender — short, stays well inside -->
+      <path d="M390,288 L390,355 Q390,372 402,372" fill="none"
+            stroke="#8B7420" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- MAIN LETTERS — all same white -->
+    <g filter="url(#glow)">
+      <!-- f -->
+      <path d="M130,310 L130,193 Q130,168 152,168 L165,168" fill="none"
+            stroke="#FFFFFF" stroke-opacity="0.92" stroke-width="38"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="112" y1="228" x2="155" y2="228"
+            stroke="#FFFFFF" stroke-opacity="0.92" stroke-width="38" stroke-linecap="round"/>
+
+      <!-- l -->
+      <line x1="200" y1="168" x2="200" y2="310"
+            stroke="#FFFFFF" stroke-opacity="0.92" stroke-width="38" stroke-linecap="round"/>
+
+      <!-- i -->
+      <line x1="268" y1="228" x2="268" y2="310"
+            stroke="#FFFFFF" stroke-opacity="0.92" stroke-width="38" stroke-linecap="round"/>
+      <circle cx="268" cy="186" r="19" fill="#FFFFFF" fill-opacity="0.92"/>
+
+      <!-- q bowl -->
+      <circle cx="348" cy="270" r="42" fill="none"
+              stroke="#FFFFFF" stroke-opacity="0.92" stroke-width="38" stroke-linecap="round"/>
+      <!-- q descender — same white, short tail -->
+      <path d="M390,288 L390,355 Q390,372 402,372" fill="none"
+            stroke="#FFFFFF" stroke-opacity="0.92" stroke-width="38"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- SHIMMER -->
+    <g>
+      <path d="M130,310 L130,193 Q130,168 152,168 L165,168" fill="none"
+            stroke="url(#shimmer)" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="112" y1="228" x2="155" y2="228" stroke="url(#shimmer)" stroke-width="38" stroke-linecap="round"/>
+      <line x1="200" y1="168" x2="200" y2="310" stroke="url(#shimmer)" stroke-width="38" stroke-linecap="round"/>
+      <line x1="268" y1="228" x2="268" y2="310" stroke="url(#shimmer)" stroke-width="38" stroke-linecap="round"/>
+      <circle cx="268" cy="186" r="19" fill="url(#shimmer)"/>
+      <circle cx="348" cy="270" r="42" fill="none" stroke="url(#shimmer)" stroke-width="38" stroke-linecap="round"/>
+      <path d="M390,288 L390,355 Q390,372 402,372" fill="none"
+            stroke="url(#shimmer)" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

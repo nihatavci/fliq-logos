@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Preview -- Iterations</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.light { background: #f5f5f5; color: #333; }
+  body.dark { background: #1a1a1a; color: #eee; }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  h1 { font-size: 1.5rem; font-weight: 600; }
+  h2 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 1rem; }
+  .toggle {
+    padding: 0.5rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  .card {
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    min-height: 200px;
+  }
+  body.light .card-img { background: #fff; }
+  body.dark .card-img { background: #2a2a2a; }
+  .card-img img {
+    max-width: 100%;
+    max-height: 180px;
+  }
+  .card-label {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-top: 1px solid rgba(128, 128, 128, 0.3);
+  }
+  body.light .card-label { background: #fafafa; }
+  body.dark .card-label { background: #222; }
+  .palette {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+    align-items: center;
+  }
+  .palette .swatch {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0,0,0,0.12);
+    flex-shrink: 0;
+  }
+  .palette .label {
+    font-size: 0.65rem;
+    opacity: 0.55;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body class="light">
+  <div class="header">
+    <h1>Logo Preview -- Iterations + Color Variations</h1>
+    <button class="toggle" onclick="document.body.classList.toggle('dark'); document.body.classList.toggle('light'); this.textContent = document.body.classList.contains('dark') ? 'Light' : 'Dark';">Dark</button>
+  </div>
+
+  <h2>53 — Glass Bubbly (Original + Color Variations)</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53.svg" alt="53-gold"></div>
+      <div class="card-label">53. Gold (original)
+        <div class="palette"><div class="swatch" style="background:#E8C84A"></div><div class="swatch" style="background:#1A1A2E"></div><div class="swatch" style="background:#FFFBE8"></div><div class="label">Dark navy + Cream</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-coral.svg" alt="53-coral"></div>
+      <div class="card-label">53. Coral / Pink
+        <div class="palette"><div class="swatch" style="background:#FF4D6D"></div><div class="swatch" style="background:#FFF0F3"></div><div class="swatch" style="background:#2D1F2F"></div><div class="label">Blush white + Plum</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-purple.svg" alt="53-purple"></div>
+      <div class="card-label">53. Deep Purple
+        <div class="palette"><div class="swatch" style="background:#7C4DFF"></div><div class="swatch" style="background:#FFD54F"></div><div class="swatch" style="background:#F5F0FF"></div><div class="label">Gold accent + Lavender white</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-teal.svg" alt="53-teal"></div>
+      <div class="card-label">53. Teal / Mint
+        <div class="palette"><div class="swatch" style="background:#4DD0C5"></div><div class="swatch" style="background:#FF6B6B"></div><div class="swatch" style="background:#F0FFFC"></div><div class="label">Coral accent + Mint white</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-dark.svg" alt="53-dark"></div>
+      <div class="card-label">53. Dark / Charcoal
+        <div class="palette"><div class="swatch" style="background:#2A2A3A"></div><div class="swatch" style="background:#E8C84A"></div><div class="swatch" style="background:#E8E8F0"></div><div class="label">Gold accent + Cool gray</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-red.svg" alt="53-red"></div>
+      <div class="card-label">53. Red
+        <div class="palette"><div class="swatch" style="background:#D32F2F"></div><div class="swatch" style="background:#FFCDD2"></div><div class="swatch" style="background:#1A1A1A"></div><div class="label">Soft pink + Black</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-wine.svg" alt="53-wine"></div>
+      <div class="card-label">53. Wine Red / Burgundy
+        <div class="palette"><div class="swatch" style="background:#7B2D42"></div><div class="swatch" style="background:#F5E6C4"></div><div class="swatch" style="background:#1C0F14"></div><div class="label">Champagne + Dark wine</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-navy.svg" alt="53-navy"></div>
+      <div class="card-label">53. Navy Blue
+        <div class="palette"><div class="swatch" style="background:#3949AB"></div><div class="swatch" style="background:#FFB74D"></div><div class="swatch" style="background:#E8EAF6"></div><div class="label">Amber accent + Ice blue</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-rosegold.svg" alt="53-rosegold"></div>
+      <div class="card-label">53. Rose Gold / Blush
+        <div class="palette"><div class="swatch" style="background:#E8A0A0"></div><div class="swatch" style="background:#2C1810"></div><div class="swatch" style="background:#FFF5F5"></div><div class="label">Dark chocolate + Snow</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-black.svg" alt="53-black"></div>
+      <div class="card-label">53. Black + Apple Gray
+        <div class="palette"><div class="swatch" style="background:#0A0A0C"></div><div class="swatch" style="background:#B0B0B8"></div><div class="swatch" style="background:#E8C84A"></div><div class="label">Silver + Gold pop</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-white.svg" alt="53-white"></div>
+      <div class="card-label">53. White bg + Gold text
+        <div class="palette"><div class="swatch" style="background:#FFFFFF;border-color:rgba(0,0,0,0.2)"></div><div class="swatch" style="background:#C9A84C"></div><div class="swatch" style="background:#1A1A2E"></div><div class="label">Gold + Dark navy</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-lavender.svg" alt="53-lavender"></div>
+      <div class="card-label">53. Soft Lavender (2026)
+        <div class="palette"><div class="swatch" style="background:#A78BDB"></div><div class="swatch" style="background:#FFE0B2"></div><div class="swatch" style="background:#F8F4FF"></div><div class="label">Peach accent + Mist</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-peach.svg" alt="53-peach"></div>
+      <div class="card-label">53. Peach Fuzz (2026)
+        <div class="palette"><div class="swatch" style="background:#FFBE98"></div><div class="swatch" style="background:#5C4033"></div><div class="swatch" style="background:#FFF8F0"></div><div class="label">Espresso + Warm white</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-sage.svg" alt="53-sage"></div>
+      <div class="card-label">53. Sage Green (2026)
+        <div class="palette"><div class="swatch" style="background:#8FAF78"></div><div class="swatch" style="background:#E8D5B5"></div><div class="swatch" style="background:#2C3E2C"></div><div class="label">Sand + Forest dark</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-indigo.svg" alt="53-indigo"></div>
+      <div class="card-label">53. Electric Indigo (2026)
+        <div class="palette"><div class="swatch" style="background:#5B4ED4"></div><div class="swatch" style="background:#00E5FF"></div><div class="swatch" style="background:#0D0D1A"></div><div class="label">Cyan spark + Deep dark</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-53-terracotta.svg" alt="53-terracotta"></div>
+      <div class="card-label">53. Warm Terracotta (2026)
+        <div class="palette"><div class="swatch" style="background:#C27856"></div><div class="swatch" style="background:#F5F0E8"></div><div class="swatch" style="background:#3A2A1E"></div><div class="label">Linen + Dark earth</div></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>30 — Bold FLIQ Wordmark (Original + Color Variations)</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30.svg" alt="30-gold"></div>
+      <div class="card-label">30. Gold (original)
+        <div class="palette"><div class="swatch" style="background:#E8C84A"></div><div class="swatch" style="background:#0D0D14"></div><div class="swatch" style="background:#FFFBE8"></div><div class="label">Dark border + Cream</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-coral.svg" alt="30-coral"></div>
+      <div class="card-label">30. Coral / Pink
+        <div class="palette"><div class="swatch" style="background:#FF4D6D"></div><div class="swatch" style="background:#FFF0F3"></div><div class="swatch" style="background:#2D1F2F"></div><div class="label">Blush + Plum</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-purple.svg" alt="30-purple"></div>
+      <div class="card-label">30. Deep Purple
+        <div class="palette"><div class="swatch" style="background:#7C4DFF"></div><div class="swatch" style="background:#FFD54F"></div><div class="swatch" style="background:#F5F0FF"></div><div class="label">Gold + Lavender white</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-teal.svg" alt="30-teal"></div>
+      <div class="card-label">30. Teal / Mint
+        <div class="palette"><div class="swatch" style="background:#4DD0C5"></div><div class="swatch" style="background:#FF6B6B"></div><div class="swatch" style="background:#F0FFFC"></div><div class="label">Coral + Mint white</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-dark.svg" alt="30-dark"></div>
+      <div class="card-label">30. Dark / Silver
+        <div class="palette"><div class="swatch" style="background:#3A3A4A"></div><div class="swatch" style="background:#B0B0B8"></div><div class="swatch" style="background:#E8C84A"></div><div class="label">Silver + Gold pop</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-red.svg" alt="30-red"></div>
+      <div class="card-label">30. Red
+        <div class="palette"><div class="swatch" style="background:#D32F2F"></div><div class="swatch" style="background:#FFCDD2"></div><div class="swatch" style="background:#1A1A1A"></div><div class="label">Soft pink + Black</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-wine.svg" alt="30-wine"></div>
+      <div class="card-label">30. Wine Red / Burgundy
+        <div class="palette"><div class="swatch" style="background:#7B2D42"></div><div class="swatch" style="background:#F5E6C4"></div><div class="swatch" style="background:#1C0F14"></div><div class="label">Champagne + Dark wine</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-navy.svg" alt="30-navy"></div>
+      <div class="card-label">30. Navy Blue
+        <div class="palette"><div class="swatch" style="background:#3949AB"></div><div class="swatch" style="background:#FFB74D"></div><div class="swatch" style="background:#E8EAF6"></div><div class="label">Amber + Ice blue</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-rosegold.svg" alt="30-rosegold"></div>
+      <div class="card-label">30. Rose Gold / Blush
+        <div class="palette"><div class="swatch" style="background:#E8A0A0"></div><div class="swatch" style="background:#2C1810"></div><div class="swatch" style="background:#FFF5F5"></div><div class="label">Chocolate + Snow</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-black.svg" alt="30-black"></div>
+      <div class="card-label">30. Black + Apple Gray
+        <div class="palette"><div class="swatch" style="background:#0A0A0C"></div><div class="swatch" style="background:#B0B0B8"></div><div class="swatch" style="background:#E8C84A"></div><div class="label">Silver + Gold pop</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-lavender.svg" alt="30-lavender"></div>
+      <div class="card-label">30. Soft Lavender (2026)
+        <div class="palette"><div class="swatch" style="background:#A78BDB"></div><div class="swatch" style="background:#FFE0B2"></div><div class="swatch" style="background:#F8F4FF"></div><div class="label">Peach + Mist</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-peach.svg" alt="30-peach"></div>
+      <div class="card-label">30. Peach Fuzz (2026)
+        <div class="palette"><div class="swatch" style="background:#FFBE98"></div><div class="swatch" style="background:#5C4033"></div><div class="swatch" style="background:#FFF8F0"></div><div class="label">Espresso + Warm white</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-sage.svg" alt="30-sage"></div>
+      <div class="card-label">30. Sage Green (2026)
+        <div class="palette"><div class="swatch" style="background:#8FAF78"></div><div class="swatch" style="background:#E8D5B5"></div><div class="swatch" style="background:#2C3E2C"></div><div class="label">Sand + Forest</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-indigo.svg" alt="30-indigo"></div>
+      <div class="card-label">30. Electric Indigo (2026)
+        <div class="palette"><div class="swatch" style="background:#5B4ED4"></div><div class="swatch" style="background:#00E5FF"></div><div class="swatch" style="background:#0D0D1A"></div><div class="label">Cyan + Deep dark</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-30-terracotta.svg" alt="30-terracotta"></div>
+      <div class="card-label">30. Warm Terracotta (2026)
+        <div class="palette"><div class="swatch" style="background:#C27856"></div><div class="swatch" style="background:#F5F0E8"></div><div class="swatch" style="background:#3A2A1E"></div><div class="label">Linen + Dark earth</div></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Originals</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-45.svg" alt="45"></div>
+      <div class="card-label">45. Tighter spacing, wider f crossbar</div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-26.svg" alt="26"></div>
+      <div class="card-label">26. No outline (prev)</div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="iterations/iteration-3.svg" alt="3"></div>
+      <div class="card-label">3. Gold heart + bolt on warm bg</div>
+    </div>
+  </div>
+</body>
+</html>

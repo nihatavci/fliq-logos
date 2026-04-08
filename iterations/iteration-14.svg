@@ -1,0 +1,70 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gold gradient left-to-right -->
+    <linearGradient id="gold-text" x1="0" y1="0.5" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="#F5E6C4"/>
+      <stop offset="50%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#92710A"/>
+    </linearGradient>
+    <!-- Lighter gold for emboss highlight (top edge) -->
+    <linearGradient id="gold-highlight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF8E8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFF8E8" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Dark shadow for emboss depth (bottom edge) -->
+    <linearGradient id="gold-shadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.35"/>
+    </linearGradient>
+    <!-- Subtle inner shadow filter for emboss effect -->
+    <filter id="emboss" x="-5%" y="-5%" width="110%" height="120%">
+      <!-- Dark shadow below -->
+      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity="0.5"/>
+      <!-- Light highlight above -->
+      <feDropShadow dx="0" dy="-2" stdDeviation="1.5" flood-color="#FFF8E8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <g id="fliq-logo">
+    <!-- Dark rounded square with white border -->
+    <g id="background">
+      <rect x="24" y="24" width="464" height="464" rx="104" fill="#0D0D14"/>
+      <rect x="24" y="24" width="464" height="464" rx="104" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-opacity="0.15"/>
+    </g>
+    <!-- Shadow layer (offset down) for emboss depth -->
+    <text
+      x="256" y="293"
+      font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+      font-weight="800"
+      font-style="italic"
+      font-size="160"
+      fill="#000000"
+      fill-opacity="0.4"
+      text-anchor="middle"
+      letter-spacing="-4"
+    >Fliq</text>
+    <!-- Highlight layer (offset up) for emboss raise -->
+    <text
+      x="256" y="287"
+      font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+      font-weight="800"
+      font-style="italic"
+      font-size="160"
+      fill="#FFF8E8"
+      fill-opacity="0.15"
+      text-anchor="middle"
+      letter-spacing="-4"
+    >Fliq</text>
+    <!-- Main gold text with emboss filter -->
+    <text
+      x="256" y="290"
+      font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+      font-weight="800"
+      font-style="italic"
+      font-size="160"
+      fill="url(#gold-text)"
+      text-anchor="middle"
+      letter-spacing="-4"
+      filter="url(#emboss)"
+    >Fliq</text>
+  </g>
+</svg>

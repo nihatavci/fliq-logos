@@ -1,0 +1,104 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gold gradient background -->
+    <linearGradient id="bg-grad" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#F7D96E"/>
+      <stop offset="50%" stop-color="#E8C84A"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+    <!-- Subtle top highlight for glass bg -->
+    <linearGradient id="bg-shine" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.08"/>
+    </linearGradient>
+    <!-- Text glass fill — white with transparency -->
+    <linearGradient id="glass-text" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#FFF8E8" stop-opacity="0.65"/>
+    </linearGradient>
+    <!-- Text highlight — top shine -->
+    <linearGradient id="text-shine" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Soft shadow for depth -->
+    <filter id="text-shadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#A8882E" flood-opacity="0.45"/>
+    </filter>
+    <!-- Inner glow/blur for glass feel -->
+    <filter id="glass-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Background vignette -->
+    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.06"/>
+    </radialGradient>
+  </defs>
+
+  <g id="fliq-logo">
+    <!-- Background rounded square -->
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg-grad)"/>
+    <!-- Glass shine overlay on bg -->
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg-shine)"/>
+    <!-- Subtle vignette -->
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#vignette)"/>
+
+    <!-- Shadow layer -->
+    <text
+      x="256" y="310"
+      font-family="Verdana, Geneva, sans-serif"
+      font-weight="700"
+      font-size="180"
+      fill="#B8942A"
+      fill-opacity="0.3"
+      text-anchor="middle"
+      letter-spacing="-4"
+      filter="url(#text-shadow)"
+    >fliq</text>
+
+    <!-- Main glass text -->
+    <text
+      x="256" y="305"
+      font-family="Verdana, Geneva, sans-serif"
+      font-weight="700"
+      font-size="180"
+      fill="url(#glass-text)"
+      text-anchor="middle"
+      letter-spacing="-4"
+      filter="url(#glass-glow)"
+    >fliq</text>
+
+    <!-- Top highlight on text -->
+    <text
+      x="256" y="305"
+      font-family="Verdana, Geneva, sans-serif"
+      font-weight="700"
+      font-size="180"
+      fill="url(#text-shine)"
+      text-anchor="middle"
+      letter-spacing="-4"
+    >fliq</text>
+
+    <!-- Subtle white outline for glass edge -->
+    <text
+      x="256" y="305"
+      font-family="Verdana, Geneva, sans-serif"
+      font-weight="700"
+      font-size="180"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="1.5"
+      stroke-opacity="0.4"
+      text-anchor="middle"
+      letter-spacing="-4"
+    >fliq</text>
+  </g>
+</svg>

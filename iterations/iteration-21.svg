@@ -1,0 +1,117 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bubble-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8C84A"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+    <clipPath id="bubble-clip">
+      <path d="
+        M160,152 L310,152
+        Q370,152 370,212 L370,312
+        Q370,352 330,352 L230,352
+        L160,420 L185,352
+        L180,352
+        Q140,352 140,312 L140,192
+        Q140,152 180,152 Z
+      "/>
+    </clipPath>
+    <clipPath id="spark-clip">
+      <path d="
+        M330,72
+        C334,112 354,132 394,136
+        C354,140 334,160 330,200
+        C326,160 306,140 266,136
+        C306,132 326,112 330,72 Z
+      "/>
+    </clipPath>
+  </defs>
+
+  <!-- Background: white rounded square -->
+  <g id="background">
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="#FFFFFF" stroke="#EBEBF0" stroke-width="2"/>
+  </g>
+
+  <g id="smart-chat">
+    <!--
+      Bold chat bubble with a 4-point AI spark merged into its top-right.
+      The spark overlaps the bubble corner so they read as one golden form.
+      3D depth via dark offset layer + right-side darkening + split spark.
+    -->
+
+    <!-- Shadow (soft, offset) -->
+    <g id="shadow" transform="translate(4,6)" opacity="0.14">
+      <path d="
+        M160,152 L310,152
+        Q370,152 370,212 L370,312
+        Q370,352 330,352 L230,352
+        L160,420 L185,352 L180,352
+        Q140,352 140,312 L140,192
+        Q140,152 180,152 Z
+      " fill="#92710A"/>
+      <path d="
+        M330,82
+        C334,120 350,138 382,142
+        C350,146 334,164 330,202
+        C326,164 310,146 278,142
+        C310,138 326,120 330,82 Z
+      " fill="#92710A"/>
+    </g>
+
+    <!-- Dark back layer (3D volume offset) -->
+    <g id="depth" transform="translate(2,3)">
+      <path d="
+        M160,152 L310,152
+        Q370,152 370,212 L370,312
+        Q370,352 330,352 L230,352
+        L160,420 L185,352 L180,352
+        Q140,352 140,312 L140,192
+        Q140,152 180,152 Z
+      " fill="#92710A"/>
+      <path d="
+        M330,82
+        C334,120 350,138 382,142
+        C350,146 334,164 330,202
+        C326,164 310,146 278,142
+        C310,138 326,120 330,82 Z
+      " fill="#92710A"/>
+    </g>
+
+    <!-- Main bubble body -->
+    <g id="bubble">
+      <path d="
+        M160,152 L310,152
+        Q370,152 370,212 L370,312
+        Q370,352 330,352 L230,352
+        L160,420 L185,352 L180,352
+        Q140,352 140,312 L140,192
+        Q140,152 180,152 Z
+      " fill="url(#bubble-grad)"/>
+      <!-- Right-side darkening for 3D volume -->
+      <rect x="270" y="152" width="100" height="270" fill="#A8882E" opacity="0.4" clip-path="url(#bubble-clip)"/>
+    </g>
+
+    <!-- 4-point spark at top-right corner of bubble -->
+    <g id="spark">
+      <path d="
+        M330,72
+        C334,112 354,132 394,136
+        C354,140 334,160 330,200
+        C326,160 306,140 266,136
+        C306,132 326,112 330,72 Z
+      " fill="#C9A84C"/>
+      <!-- Brighter left half for depth -->
+      <path d="M266,72 L330,72 L330,200 L266,200 Z" fill="#E8C84A" clip-path="url(#spark-clip)"/>
+    </g>
+
+    <!-- Small accent spark (top-left balance) -->
+    <g id="spark-accent">
+      <path d="
+        M182,118
+        C183,128 188,133 198,134
+        C188,135 183,140 182,150
+        C181,140 176,135 166,134
+        C176,133 181,128 182,118 Z
+      " fill="#E8C84A"/>
+    </g>
+  </g>
+</svg>

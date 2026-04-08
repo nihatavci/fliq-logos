@@ -1,0 +1,116 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gold gradient background -->
+    <linearGradient id="bg" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#F7D96E"/>
+      <stop offset="45%" stop-color="#E8C84A"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+    <!-- Top shine overlay -->
+    <linearGradient id="bg-shine" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.30"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.05"/>
+    </linearGradient>
+    <!-- Glass fill — less pale, more opaque white -->
+    <linearGradient id="glass" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#FFFCF0" stop-opacity="0.80"/>
+    </linearGradient>
+    <!-- Shimmer highlight -->
+    <linearGradient id="shimmer" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-15%" y="-10%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#A8882E" flood-opacity="0.40"/>
+    </filter>
+  </defs>
+
+  <g id="fliq-logo">
+    <!-- Background -->
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg)"/>
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg-shine)"/>
+
+    <!--
+      Letter positions (evenly spaced, centered):
+      f: center x=118   l: center x=196   i: center x=274   q: center x=368
+      Stroke width: 40, round caps
+      Baseline: 320, x-height: 235, ascender: 175
+    -->
+
+    <!-- SHADOW LAYER -->
+    <g filter="url(#shadow)" opacity="0.3">
+      <!-- f stem + hook -->
+      <path d="M118,320 L118,200 Q118,172 143,172 L155,172" fill="none"
+            stroke="#8B7420" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- f crossbar -->
+      <line x1="96" y1="235" x2="148" y2="235" stroke="#8B7420"
+            stroke-width="40" stroke-linecap="round"/>
+
+      <!-- l -->
+      <line x1="196" y1="175" x2="196" y2="320" stroke="#8B7420"
+            stroke-width="40" stroke-linecap="round"/>
+
+      <!-- i body -->
+      <line x1="274" y1="235" x2="274" y2="320" stroke="#8B7420"
+            stroke-width="40" stroke-linecap="round"/>
+      <!-- i dot -->
+      <circle cx="274" cy="190" r="20" fill="#8B7420"/>
+
+      <!-- q bowl -->
+      <circle cx="362" cy="278" r="46" fill="none"
+              stroke="#8B7420" stroke-width="40" stroke-linecap="round"/>
+      <!-- q descender — smooth curve down and kick right -->
+      <path d="M408,300 L408,362 Q408,382 424,382" fill="none"
+            stroke="#8B7420" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- MAIN GLASS LETTERS -->
+    <g>
+      <!-- f stem + hook -->
+      <path d="M118,320 L118,200 Q118,172 143,172 L155,172" fill="none"
+            stroke="url(#glass)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- f crossbar -->
+      <line x1="96" y1="235" x2="148" y2="235" stroke="url(#glass)"
+            stroke-width="40" stroke-linecap="round"/>
+
+      <!-- l -->
+      <line x1="196" y1="175" x2="196" y2="320" stroke="url(#glass)"
+            stroke-width="40" stroke-linecap="round"/>
+
+      <!-- i body -->
+      <line x1="274" y1="235" x2="274" y2="320" stroke="url(#glass)"
+            stroke-width="40" stroke-linecap="round"/>
+      <!-- i dot -->
+      <circle cx="274" cy="190" r="20" fill="url(#glass)"/>
+
+      <!-- q bowl -->
+      <circle cx="362" cy="278" r="46" fill="none"
+              stroke="url(#glass)" stroke-width="40" stroke-linecap="round"/>
+      <!-- q descender — clean curve ending in rounded kick -->
+      <path d="M408,300 L408,362 Q408,382 424,382" fill="none"
+            stroke="url(#glass)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- SHIMMER HIGHLIGHT -->
+    <g>
+      <path d="M118,320 L118,200 Q118,172 143,172 L155,172" fill="none"
+            stroke="url(#shimmer)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="96" y1="235" x2="148" y2="235" stroke="url(#shimmer)"
+            stroke-width="40" stroke-linecap="round"/>
+      <line x1="196" y1="175" x2="196" y2="320" stroke="url(#shimmer)"
+            stroke-width="40" stroke-linecap="round"/>
+      <line x1="274" y1="235" x2="274" y2="320" stroke="url(#shimmer)"
+            stroke-width="40" stroke-linecap="round"/>
+      <circle cx="274" cy="190" r="20" fill="url(#shimmer)"/>
+      <circle cx="362" cy="278" r="46" fill="none"
+              stroke="url(#shimmer)" stroke-width="40" stroke-linecap="round"/>
+      <path d="M408,300 L408,362 Q408,382 424,382" fill="none"
+            stroke="url(#shimmer)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

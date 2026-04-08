@@ -1,0 +1,70 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#F7D96E"/>
+      <stop offset="45%" stop-color="#E8C84A"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+    <linearGradient id="bg-shine" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.30"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.05"/>
+    </linearGradient>
+    <!-- Subtle gradient: pure white → very slight warm cream at bottom -->
+    <!-- Using OPAQUE colors, not transparency — no overlap issues -->
+    <linearGradient id="glass" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#FFFCF5"/>
+      <stop offset="100%" stop-color="#FFF3E0"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-10%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#A8882E" flood-opacity="0.40"/>
+    </filter>
+  </defs>
+
+  <g id="fliq-logo">
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg)"/>
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg-shine)"/>
+
+    <!-- SHADOW -->
+    <g filter="url(#shadow)" transform="translate(0,3)" opacity="0.22">
+      <path d="M132,305 L132,192 Q132,168 152,168 L162,168" fill="none"
+            stroke="#8B7420" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="106" y1="225" x2="158" y2="225" stroke="#8B7420" stroke-width="38" stroke-linecap="round"/>
+      <line x1="211" y1="168" x2="211" y2="305" stroke="#8B7420" stroke-width="38" stroke-linecap="round"/>
+      <line x1="264" y1="225" x2="264" y2="305" stroke="#8B7420" stroke-width="38" stroke-linecap="round"/>
+      <circle cx="264" cy="183" r="19" fill="#8B7420"/>
+      <path d="M356,228 A40,40 0 0,1 396,268 L396,350 Q396,368 412,368" fill="none"
+            stroke="#8B7420" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M396,268 A40,40 0 1,1 356,228" fill="none"
+            stroke="#8B7420" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- ALL LETTERS — same opaque gradient -->
+    <g>
+      <!-- f -->
+      <path d="M132,305 L132,192 Q132,168 152,168 L162,168" fill="none"
+            stroke="url(#glass)" stroke-width="38"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="106" y1="225" x2="158" y2="225" stroke="url(#glass)"
+            stroke-width="38" stroke-linecap="round"/>
+
+      <!-- l -->
+      <line x1="211" y1="168" x2="211" y2="305" stroke="url(#glass)"
+            stroke-width="38" stroke-linecap="round"/>
+
+      <!-- i -->
+      <line x1="264" y1="225" x2="264" y2="305" stroke="url(#glass)"
+            stroke-width="38" stroke-linecap="round"/>
+      <circle cx="264" cy="183" r="19" fill="url(#glass)"/>
+
+      <!-- q -->
+      <path d="M356,228 A40,40 0 0,1 396,268 L396,350 Q396,368 412,368" fill="none"
+            stroke="url(#glass)" stroke-width="38"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M396,268 A40,40 0 1,1 356,228" fill="none"
+            stroke="url(#glass)" stroke-width="38"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

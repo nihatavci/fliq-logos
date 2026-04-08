@@ -1,0 +1,28 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gold gradient left-to-right like Rizz's pink-to-purple but in gold tones -->
+    <linearGradient id="gold-text" x1="0" y1="0.5" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="#F5E6C4"/>
+      <stop offset="50%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#92710A"/>
+    </linearGradient>
+  </defs>
+  <g id="fliq-logo">
+    <!-- Dark rounded square like Rizz -->
+    <g id="background">
+      <rect x="24" y="24" width="464" height="464" rx="104" fill="#0D0D14"/>
+    </g>
+    <!-- "Fliq" bold italic wordmark, centered -->
+    <!-- Using system font for clean rendering -->
+    <text
+      x="256" y="290"
+      font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+      font-weight="800"
+      font-style="italic"
+      font-size="160"
+      fill="url(#gold-text)"
+      text-anchor="middle"
+      letter-spacing="-4"
+    >Fliq</text>
+  </g>
+</svg>

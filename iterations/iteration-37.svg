@@ -1,0 +1,81 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gold gradient background -->
+    <linearGradient id="bg" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#F7D96E"/>
+      <stop offset="45%" stop-color="#E8C84A"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+    <!-- Top shine overlay -->
+    <linearGradient id="bg-shine" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.30"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.05"/>
+    </linearGradient>
+    <!-- Glass fill — uniform white with subtle transparency -->
+    <linearGradient id="glass" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.88"/>
+    </linearGradient>
+    <!-- Shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="125%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#A8882E" flood-opacity="0.38"/>
+    </filter>
+    <!-- Shimmer highlight -->
+    <linearGradient id="shimmer" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g id="fliq-logo">
+    <!-- Background -->
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg)"/>
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg-shine)"/>
+
+    <!-- Shadow text -->
+    <text x="256" y="320"
+      font-family="Arial Rounded MT Bold, Nunito, Varela Round, Verdana, sans-serif"
+      font-weight="700"
+      font-size="190"
+      fill="#8B7420" fill-opacity="0.2"
+      text-anchor="middle"
+      letter-spacing="-2"
+      filter="url(#shadow)"
+    >fliq</text>
+
+    <!-- Main glass text -->
+    <text x="256" y="315"
+      font-family="Arial Rounded MT Bold, Nunito, Varela Round, Verdana, sans-serif"
+      font-weight="700"
+      font-size="190"
+      fill="url(#glass)"
+      text-anchor="middle"
+      letter-spacing="-2"
+    >fliq</text>
+
+    <!-- Shimmer overlay -->
+    <text x="256" y="315"
+      font-family="Arial Rounded MT Bold, Nunito, Varela Round, Verdana, sans-serif"
+      font-weight="700"
+      font-size="190"
+      fill="url(#shimmer)"
+      text-anchor="middle"
+      letter-spacing="-2"
+    >fliq</text>
+
+    <!-- Subtle white edge -->
+    <text x="256" y="315"
+      font-family="Arial Rounded MT Bold, Nunito, Varela Round, Verdana, sans-serif"
+      font-weight="700"
+      font-size="190"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="1"
+      stroke-opacity="0.3"
+      text-anchor="middle"
+      letter-spacing="-2"
+    >fliq</text>
+  </g>
+</svg>

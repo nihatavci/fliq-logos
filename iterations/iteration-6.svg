@@ -1,0 +1,39 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Rich gold gradient — dark gold to bright gold to warm gold -->
+    <linearGradient id="gold-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8C84A"/>
+      <stop offset="40%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#92710A"/>
+    </linearGradient>
+    <!-- Subtle gold shadow -->
+    <filter id="gold-shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#92710A" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <g id="fliq-logo">
+    <!-- White rounded square -->
+    <g id="background">
+      <rect x="24" y="24" width="464" height="464" rx="104" fill="#FFFFFF"/>
+      <rect x="24" y="24" width="464" height="464" rx="104" fill="none" stroke="#EBEBF0" stroke-width="2"/>
+    </g>
+    <!-- Centered "Fliq" wordmark -->
+    <!-- Total width ~316, centered at 256: starts at ~98 -->
+    <g id="wordmark" filter="url(#gold-shadow)" transform="translate(256,256) skewX(-8) translate(-256,-256)">
+      <!-- F: x=98..206, y=188..336 -->
+      <path d="M98 336 L98 188 L206 188 L206 220 L140 220 L140 250 L194 250 L194 280 L140 280 L140 336Z" fill="url(#gold-grad)"/>
+      <!-- l: x=214..250, y=188..336 -->
+      <rect x="214" y="188" width="36" height="148" rx="2" fill="url(#gold-grad)"/>
+      <!-- i dot: centered at 284, y=178 -->
+      <circle cx="284" cy="178" r="16" fill="url(#gold-grad)"/>
+      <!-- i stem: x=266..302, y=210..336 -->
+      <rect x="266" y="210" width="36" height="126" rx="2" fill="url(#gold-grad)"/>
+      <!-- q bowl: proper Q shape — round bowl with diagonal kick tail -->
+      <path d="M336 210 C336 188 352 176 376 176 C400 176 416 188 416 210 L416 316 C416 338 400 350 376 350 C352 350 336 338 336 316Z" fill="url(#gold-grad)"/>
+      <!-- q hole (counter) -->
+      <path d="M362 214 C356 214 354 222 354 230 L354 296 C354 304 356 312 362 312 L390 312 C396 312 398 304 398 296 L398 230 C398 222 396 214 390 214Z" fill="#FFFFFF"/>
+      <!-- q tail — diagonal kick like a proper Q -->
+      <path d="M388 320 L420 380 L414 380 C414 380 406 370 398 356 L388 336Z" fill="url(#gold-grad)"/>
+    </g>
+  </g>
+</svg>

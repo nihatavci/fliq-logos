@@ -1,0 +1,176 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gold gradient background — warm top to rich bottom -->
+    <linearGradient id="bg" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#F7D96E"/>
+      <stop offset="45%" stop-color="#E8C84A"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+    <!-- Top-half shine overlay -->
+    <linearGradient id="bg-shine" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.30"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.05"/>
+    </linearGradient>
+    <!-- Glass fill for text — white fading to translucent -->
+    <linearGradient id="glass" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.97"/>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#FFF8E8" stop-opacity="0.60"/>
+    </linearGradient>
+    <!-- Top highlight shimmer -->
+    <linearGradient id="shimmer" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-15%" y="-10%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#A8882E" flood-opacity="0.50"/>
+    </filter>
+    <!-- Soft inner glow -->
+    <filter id="glow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <g id="fliq-logo">
+    <!-- Rounded-square background -->
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg)"/>
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg-shine)"/>
+
+    <!-- ===== Bubbly "fliq" letterforms ===== -->
+    <!-- Built from thick rounded strokes on skeleton paths -->
+    <!-- Baseline ~310, x-height ~230, ascender ~170 -->
+
+    <!-- SHADOW LAYER (offset down) -->
+    <g filter="url(#shadow)" transform="translate(0,3)">
+      <!-- f skeleton -->
+      <path d="M100,315 L100,195 Q100,165 125,165 L145,165" fill="none"
+            stroke="#B8942A" stroke-opacity="0.25" stroke-width="44"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="82" y1="230" x2="132" y2="230" stroke="#B8942A" stroke-opacity="0.25"
+            stroke-width="44" stroke-linecap="round"/>
+
+      <!-- l skeleton -->
+      <path d="M168,170 L168,315" fill="none"
+            stroke="#B8942A" stroke-opacity="0.25" stroke-width="44"
+            stroke-linecap="round"/>
+
+      <!-- i skeleton -->
+      <line x1="236" y1="230" x2="236" y2="315" stroke="#B8942A" stroke-opacity="0.25"
+            stroke-width="44" stroke-linecap="round"/>
+      <circle cx="236" cy="185" r="22" fill="#B8942A" fill-opacity="0.25"/>
+
+      <!-- q skeleton -->
+      <circle cx="330" cy="272" r="48" fill="none"
+              stroke="#B8942A" stroke-opacity="0.25" stroke-width="44"
+              stroke-linecap="round"/>
+      <path d="M378,290 L378,370 Q378,395 400,395" fill="none"
+            stroke="#B8942A" stroke-opacity="0.25" stroke-width="44"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- MAIN GLASS LAYER -->
+    <g filter="url(#glow)">
+      <!-- f -->
+      <path d="M100,315 L100,195 Q100,165 125,165 L145,165" fill="none"
+            stroke="url(#glass)" stroke-width="44"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="82" y1="230" x2="132" y2="230" stroke="url(#glass)"
+            stroke-width="44" stroke-linecap="round"/>
+
+      <!-- l -->
+      <path d="M168,170 L168,315" fill="none"
+            stroke="url(#glass)" stroke-width="44"
+            stroke-linecap="round"/>
+
+      <!-- i body -->
+      <line x1="236" y1="230" x2="236" y2="315" stroke="url(#glass)"
+            stroke-width="44" stroke-linecap="round"/>
+      <!-- i dot -->
+      <circle cx="236" cy="185" r="22" fill="url(#glass)"/>
+
+      <!-- q bowl -->
+      <circle cx="330" cy="272" r="48" fill="none"
+              stroke="url(#glass)" stroke-width="44"
+              stroke-linecap="round"/>
+      <!-- q descender -->
+      <path d="M378,290 L378,370 Q378,395 400,395" fill="none"
+            stroke="url(#glass)" stroke-width="44"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- HIGHLIGHT / SHIMMER LAYER -->
+    <g>
+      <!-- f -->
+      <path d="M100,315 L100,195 Q100,165 125,165 L145,165" fill="none"
+            stroke="url(#shimmer)" stroke-width="44"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="82" y1="230" x2="132" y2="230" stroke="url(#shimmer)"
+            stroke-width="44" stroke-linecap="round"/>
+
+      <!-- l -->
+      <path d="M168,170 L168,315" fill="none"
+            stroke="url(#shimmer)" stroke-width="44"
+            stroke-linecap="round"/>
+
+      <!-- i -->
+      <line x1="236" y1="230" x2="236" y2="315" stroke="url(#shimmer)"
+            stroke-width="44" stroke-linecap="round"/>
+      <circle cx="236" cy="185" r="22" fill="url(#shimmer)"/>
+
+      <!-- q -->
+      <circle cx="330" cy="272" r="48" fill="none"
+              stroke="url(#shimmer)" stroke-width="44"
+              stroke-linecap="round"/>
+      <path d="M378,290 L378,370 Q378,395 400,395" fill="none"
+            stroke="url(#shimmer)" stroke-width="44"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Thin white edge for glass border feel -->
+    <g>
+      <!-- f -->
+      <path d="M100,315 L100,195 Q100,165 125,165 L145,165" fill="none"
+            stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="46"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M100,315 L100,195 Q100,165 125,165 L145,165" fill="none"
+            stroke="url(#glass)" stroke-width="42"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="82" y1="230" x2="132" y2="230" stroke="#FFFFFF" stroke-opacity="0.35"
+            stroke-width="46" stroke-linecap="round"/>
+      <line x1="82" y1="230" x2="132" y2="230" stroke="url(#glass)"
+            stroke-width="42" stroke-linecap="round"/>
+
+      <!-- l -->
+      <path d="M168,170 L168,315" fill="none"
+            stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="46"
+            stroke-linecap="round"/>
+      <path d="M168,170 L168,315" fill="none"
+            stroke="url(#glass)" stroke-width="42"
+            stroke-linecap="round"/>
+
+      <!-- i -->
+      <line x1="236" y1="230" x2="236" y2="315" stroke="#FFFFFF" stroke-opacity="0.35"
+            stroke-width="46" stroke-linecap="round"/>
+      <line x1="236" y1="230" x2="236" y2="315" stroke="url(#glass)"
+            stroke-width="42" stroke-linecap="round"/>
+
+      <!-- q -->
+      <circle cx="330" cy="272" r="48" fill="none"
+              stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="46"
+              stroke-linecap="round"/>
+      <circle cx="330" cy="272" r="48" fill="none"
+              stroke="url(#glass)" stroke-width="42"
+              stroke-linecap="round"/>
+      <path d="M378,290 L378,370 Q378,395 400,395" fill="none"
+            stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="46"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M378,290 L378,370 Q378,395 400,395" fill="none"
+            stroke="url(#glass)" stroke-width="42"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

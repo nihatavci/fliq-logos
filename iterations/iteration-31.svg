@@ -1,0 +1,44 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradient: dark warm to deep gold -->
+    <linearGradient id="bg-grad" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#0D0D14"/>
+      <stop offset="100%" stop-color="#1A1508"/>
+    </linearGradient>
+    <!-- Clip for top half -->
+    <clipPath id="top-half">
+      <rect x="0" y="0" width="512" height="256"/>
+    </clipPath>
+    <!-- Clip for bottom half -->
+    <clipPath id="bottom-half">
+      <rect x="0" y="256" width="512" height="256"/>
+    </clipPath>
+  </defs>
+  <g id="fliq-logo">
+    <!-- Dark rounded square background -->
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bg-grad)"/>
+
+    <!-- === TOP HALF: warm golds === -->
+    <g clip-path="url(#top-half)">
+      <!-- Outer ring -->
+      <circle cx="256" cy="256" r="180" fill="#C9A84C"/>
+      <!-- Middle ring -->
+      <circle cx="256" cy="256" r="120" fill="#E8C84A"/>
+      <!-- Inner circle -->
+      <circle cx="256" cy="256" r="64" fill="#F7D96E"/>
+    </g>
+
+    <!-- === BOTTOM HALF: muted/cool golds === -->
+    <g clip-path="url(#bottom-half)">
+      <!-- Outer ring -->
+      <circle cx="256" cy="256" r="180" fill="#A8882E"/>
+      <!-- Middle ring -->
+      <circle cx="256" cy="256" r="120" fill="#BFA668"/>
+      <!-- Inner circle -->
+      <circle cx="256" cy="256" r="64" fill="#D4BE78"/>
+    </g>
+
+    <!-- Subtle center highlight -->
+    <circle cx="256" cy="240" r="28" fill="#FFF8E8" opacity="0.25"/>
+  </g>
+</svg>

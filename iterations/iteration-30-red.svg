@@ -1,0 +1,20 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="red-grad" x1="0" y1="0.5" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="#EF5350"/>
+      <stop offset="40%" stop-color="#D32F2F"/>
+      <stop offset="75%" stop-color="#C62828"/>
+      <stop offset="100%" stop-color="#B71C1C"/>
+    </linearGradient>
+    <filter id="glow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#D32F2F" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <g>
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="#FFFFFF"/>
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="none" stroke="#EBEBF0" stroke-width="2"/>
+    <text x="256" y="300" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="900" font-style="italic" font-size="176" fill="#D32F2F" fill-opacity="0.18" text-anchor="middle" letter-spacing="-2" filter="url(#glow)">FLIQ</text>
+    <text x="256" y="300" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="900" font-style="italic" font-size="176" fill="none" stroke="#0D0D14" stroke-width="10" stroke-linejoin="round" text-anchor="middle" letter-spacing="-2">FLIQ</text>
+    <text x="256" y="300" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="900" font-style="italic" font-size="176" fill="url(#red-grad)" stroke="url(#red-grad)" stroke-width="3" text-anchor="middle" letter-spacing="-2">FLIQ</text>
+  </g>
+</svg>
